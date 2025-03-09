@@ -1,0 +1,17 @@
+2,3,6
+-2,3,-6
+2,-3,-6
+-2,-3,6
+0,5,0
+5,0,0
+0,0,0
+0.1,0.2,0
+2.9,1.2,3
+1000000000,1000000000,1.0E18
+1.0E18,1.0E18,1.0E36
+Infinity,2,Infinity
+-Infinity,2,-Infinity
+Infinity,Infinity,Infinity
+-Infinity,-Infinity,Infinity
+NaN,1,NaN
+1,NaN,NaN

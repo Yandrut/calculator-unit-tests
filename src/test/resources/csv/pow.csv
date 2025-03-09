@@ -1,0 +1,16 @@
+2,3,8
+2,-3,0.125
+-2,3,-8
+-2,-3,-0.125
+5,0,1
+5,1,5
+0,5,0
+0,-5,Infinity
+1,10,1
+2.5,2,6.25
+2.5,2.8,6.25
+Infinity,2,Infinity
+Infinity,-1,0
+-INFINITY,2,INFINITY
+NaN,2,NaN
+2,NaN,NaN
