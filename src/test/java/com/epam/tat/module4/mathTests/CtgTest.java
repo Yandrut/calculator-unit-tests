@@ -6,11 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.epam.tat.module4.configuration.BaseTest;
 import com.epam.tat.module4.utils.NumberParser;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class CtgTest extends BaseTest {
 
+    @DisplayName("Ctg positive scenarios")
     @ParameterizedTest
     @CsvFileSource(resources = {"/csv/cotangents.csv"})
     public void ctgPositiveScenarios(double param, String expected) {
@@ -24,6 +26,7 @@ public class CtgTest extends BaseTest {
         }
     }
 
+    @DisplayName("Ctg nullable scenarios")
     @ParameterizedTest
     @CsvFileSource(resources = "/csv/nullOnly.csv")
     public void nullableCtg(String param) {

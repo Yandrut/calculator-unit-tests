@@ -4,11 +4,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import com.epam.tat.module4.configuration.BaseTest;
 import com.epam.tat.module4.utils.NumberParser;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class SubtractTest extends BaseTest {
 
+    @DisplayName("Subtracting double numbers positive cases")
     @ParameterizedTest
     @CsvFileSource(resources = {"/csv/subtractionNumbers.csv"})
     public void doublePositiveScenarios(double param1, double param2, double expected) {
@@ -16,6 +18,7 @@ public class SubtractTest extends BaseTest {
         assertEquals(expected, actual);
     }
 
+    @DisplayName("Subtracting double nullable cases")
     @ParameterizedTest
     @CsvFileSource(resources = {"/csv/nullableNumbers.csv"})
     public void nullableDouble(String param1, String param2) {
@@ -24,6 +27,7 @@ public class SubtractTest extends BaseTest {
                 NumberParser.parseAsDouble(param2)));
     }
 
+    @DisplayName("Subtracting long numbers positive cases")
     @ParameterizedTest
     @CsvFileSource(resources = {"/csv/subtractionNumbers.csv"})
     public void longPositiveScenarios(String param1, String param2, String expected) {
@@ -32,6 +36,7 @@ public class SubtractTest extends BaseTest {
                 (long) NumberParser.parseAsDouble(param2)));
     }
 
+    @DisplayName("Subtracting long numbers nullable cases")
     @ParameterizedTest
     @CsvFileSource(resources = {"/csv/nullableNumbers.csv"})
     public void nullableLong(String param1, String param2) {

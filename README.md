@@ -10,4 +10,4 @@ Unit testing task.
 
 
 **Generated report:**
-![img.png](readmeContents/img.png)
+![img_1.png](readmeContents/img_1.png)
