@@ -2,6 +2,7 @@ package com.epam.tat.module4;
 
 import com.epam.tat.module4.configuration.BaseTest;
 import com.epam.tat.module4.utils.NumberParser;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SumTest extends BaseTest {
 
+    @DisplayName("Summing double positive scenarios")
     @ParameterizedTest
     @CsvFileSource(resources = "/csv/sumPositiveValues.csv")
     public void doublePositiveScenarios(double param1, double param2, double expected) {
@@ -16,6 +18,7 @@ public class SumTest extends BaseTest {
         assertEquals(expected, actual);
     }
 
+    @DisplayName("Summing double nullable scenarios")
     @ParameterizedTest
     @CsvFileSource(resources = "/csv/nullableNumbers.csv")
     public void nullableDouble(String param1, String param2) {
@@ -24,6 +27,7 @@ public class SumTest extends BaseTest {
                 NumberParser.parseAsDouble(param2)));
     }
 
+    @DisplayName("Summing long positive scenarios")
     @ParameterizedTest
     @CsvFileSource(resources = {"/csv/sumPositiveValuesLong.csv"})
     public void longPositiveScenarios(long param1, long param2, long expected) {
@@ -31,6 +35,7 @@ public class SumTest extends BaseTest {
         assertEquals(expected, actual);
     }
 
+    @DisplayName("Summing long nullable scenarios")
     @ParameterizedTest
     @CsvFileSource(resources = "/csv/nullableNumbers.csv")
     public void nullableLong(String param1, String param2) {
